@@ -1,0 +1,24 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
+class Vector {
+ private:
+  int *Vec_ptr;
+  int Vec_size;
+  int Vec_capacity;
+
+ public:
+  Vector();
+  Vector(const Vector &other);
+  ~Vector();
+
+  Vector& operator=(const Vector &other);
+
+  int size();
+  int capacity();
+  void push_back(int element);
+  void reserve(int n);
+  int& operator[](unsigned int index);
+};
+
+#endif
